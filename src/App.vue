@@ -62,7 +62,7 @@ export default {
           url: '/new'
         },
         {
-          title: 'Мои заказы',
+          title: 'Мои заявки',
           icon: 'list',
           url: '/list'
         }
