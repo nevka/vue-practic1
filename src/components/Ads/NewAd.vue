@@ -52,10 +52,12 @@
           const ad = {
             title: this.title,
             description: this.description,
-            promo: this.promo
+            promo: this.promo,
+            imageSrc: 'https://img2.labirint.ru/books58/571060/covermid.jpg'
           }
-
           console.log(ad)
+
+          this.$store.dispatch('createAd', ad)
         }
       }
     }

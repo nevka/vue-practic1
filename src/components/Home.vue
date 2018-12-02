@@ -26,7 +26,7 @@
             </v-card-title>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn flat :to="'/add/' + ad.id">Открыть</v-btn>
+              <v-btn flat :to="'/ad/' + ad.id">Открыть</v-btn>
               <v-btn flat raised class="primary">Купить</v-btn>
             </v-card-actions>
           </v-card>
