@@ -56,7 +56,7 @@
             .then(() => {
               this.$router.push('/')
             })
-            .catch(er => console.log(er))
+            .catch(() => {})
         }
       }
     }

@@ -28,10 +28,15 @@
     </v-toolbar>
 
     <v-content>
-
       <router-view></router-view>
-
     </v-content>
+
+    <template v-if="error">
+      <v-snackbar color="error" :timeout="5000" :multi-line="true" @input="closeError" :value="true">
+        {{error}}
+        <v-btn dark flat @click.native="closeError">Закрыть</v-btn>
+      </v-snackbar>
+    </template>
   </v-app>
 </template>
 
@@ -67,6 +72,16 @@ export default {
           url: '/list'
         }
       ]
+    }
+  },
+  computed: {
+    error () {
+      return this.$store.getters.error
+    }
+  },
+  methods: {
+    closeError () {
+      this.$store.dispatch('clearError')
     }
   }
 }
