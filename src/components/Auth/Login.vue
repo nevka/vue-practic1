@@ -59,6 +59,11 @@
             .catch(() => {})
         }
       }
+    },
+    created () {
+      if (this.$route.query['loginError']) {
+        this.$store.dispatch('setError', 'Пожалуйста авторизуйтесь, чтобы получить доступ к данной странице!')
+      }
     }
   }
 </script>
