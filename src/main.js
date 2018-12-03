@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import Vuetify from 'vuetify'
 import * as fb from 'firebase'
+// import * as fb from 'firebase/app'
 import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Vuetify)
@@ -17,7 +18,7 @@ new Vue({
   store,
   components: { App },
   template: '<App/>',
-  create () {
+  created () {
     // Initialize Firebase
     fb.initializeApp({
       apiKey: 'AIzaSyAoNQi-eMRQVtwdKq_Ol1oqbRegdgi8GuY',
