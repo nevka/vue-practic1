@@ -47,7 +47,7 @@
     },
     computed: {
       loading () {
-        return this.$store.loading
+        return this.$store.getters.loading
       }
     },
     methods: {
